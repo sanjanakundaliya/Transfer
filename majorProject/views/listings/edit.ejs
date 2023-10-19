@@ -1,0 +1,34 @@
+<%layout("/layouts/boilerplate")%>
+<div class="row ">
+<div class="col-8 offset-2">
+    <br/>
+    <h3>Edit your listing</h3>
+    <form method="POST" action="/listings/<%=listing._id%>?_method=PUT">
+        <div class="mb-3">
+        <lable for="title" class="form-label">Title</lable>
+        <input type="text" value="<%= listing.title %>" name="listing[title]" class="form-control">
+        </div>
+        <div class="mb-3">
+            <lable for="description" class="form-label">Description</lable>
+            <textarea type="text" value="<%= listing.description %>"  name="listing[description]" class="form-control"></textarea>
+        </div>
+        <div class="mb-3">
+            <lable for="image" class="form-label">Image</lable>
+            <input type="text" value="<%= listing.image %>" name="listing[image]" class="form-control">
+        </div>
+        <div class="mb-3">
+        <lable for="price" class="form-label">Price</lable>
+        <input type="number" value="<%= listing.price %>" name="listing[price]" class="form-control">
+        </div>
+        <div class="mb-3">
+        <lable for="country" class="form-label">Country</lable>
+        <input type="text" value="<%= listing.country %>" name="listing[country]" class="form-control">
+        </div>
+        <div class="mb-3">
+        <lable for="location" class="form-label">Location</lable>
+        <input type="text" value="<%= listing.location %>" name="listing[location]" class="form-control">
+        </div>
+        <button class="btn btn-dark edit-btn mt-2 mb-2">Edit</button>
+    </form>
+</div>
+</div>
